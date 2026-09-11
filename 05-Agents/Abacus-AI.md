@@ -150,7 +150,8 @@ Keystone-Obsidian-Vault/
 ├── 01-Clients/                # One subfolder per client
 │   └── [Client-Name]/
 │       ├── OPFMS-[Name].md    # Client master sheet
-│       └── Sessions/          # All session notes
+│       ├── Sessions/          # All session notes
+│       └── Documents/         # Client's uploaded files, forms, attachments
 ├── 02-Forms-Repository/       # All LMI forms as markdown
 ├── 03-Assignments/            # Per-lesson assignment templates
 ├── 04-Resources/              # Guides, scoring references
@@ -183,14 +184,16 @@ Keystone-Obsidian-Vault/
 
 ### Creating a New Client
 
-1. Duplicate `00-Templates/OPFMS-Client-Master.md`
-2. Create folder: `01-Clients/[FirstName-LastName]/`
-3. Create subfolder: `01-Clients/[FirstName-LastName]/Sessions/`
-4. Rename duplicated template: `OPFMS-[FirstName-LastName].md`
-5. Fill in YAML frontmatter
-6. Fill in Participant Profile section
-7. Run personality assessment → fill Personality Profile
-8. Define intangibles together with client (custom scale definitions)
+1. Create folder: `01-Clients/[FirstName-LastName]/`
+2. Create subfolder: `01-Clients/[FirstName-LastName]/Sessions/`
+3. Create subfolder: `01-Clients/[FirstName-LastName]/Documents/`
+4. Inside the client folder, create a new note using Templater → insert `OPFMS-Client-Master` template
+5. Answer all prompts (name, email, mobile, DOB, job, org, start date, facilitator)
+6. File auto-renames to `OPFMS-[FirstName-LastName].md`
+7. Fill in Participant Profile section (auto-populated from prompts)
+8. Run personality assessment → fill Personality Profile
+9. Define intangibles together with client (custom scale definitions for each)
+10. Fill in Important Facilitator Notes ("What NOT to do", "How to care", patterns)
 
 ### Starting a New Session
 
@@ -457,6 +460,7 @@ git reset --hard origin/main
 | 2026-09-11 | 1.0 | Initial creation — captured all requirements from vault build conversation |
 | 2026-09-11 | 1.1 | Rewrote all three templates with Templater plugin syntax |
 | 2026-09-11 | 1.2 | Fixed template issues: removed PDF/DOCX from 00-Templates, added facilitator prompt to Session-Note and Client-Summary-Email, added company tag (the-keystone-group) to all templates, clarified AI-Derived Action Steps workflow, added End-of-Session Checklist |
+| 2026-09-11 | 1.3 | Added Documents/ subfolder to client folder structure for storing uploaded files, forms, and attachments |
 
 ---
 
