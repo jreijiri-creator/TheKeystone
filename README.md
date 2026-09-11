@@ -1,5 +1,7 @@
 # The Keystone Group — Coaching Vault
 
+> **🔥 SYNC TEST — If you see this line, the GitHub sync is working! 🔥**
+
 > **Obsidian-based client management system for The Keystone Group coaching practice.**
 
 ---
