@@ -6,6 +6,7 @@ const sentVia = await tp.system.suggester(
   ["📧 Email", "💬 WhatsApp"],
   ["Email", "WhatsApp"]
 );
+const facilitator = await tp.system.prompt("Facilitator Name", "");
 const today = tp.date.now("YYYY-MM-DD");
 const todayLong = tp.date.now("MMMM DD, YYYY");
 const slug = clientName.replace(/ /g, "-");
@@ -18,7 +19,7 @@ session_number: <% sessionNum %>
 lesson: "<% lessonNum %>"
 status: "Draft"
 sent_via: "<% sentVia %>"
-tags: [summary, <% slug %>]
+tags: [summary, <% slug %>, the-keystone-group]
 ---
 
 # Client Summary — <% clientName %> — Session <% sessionNum %>
@@ -77,7 +78,7 @@ Looking forward to our next session.
 
 Positively,
 
-[Your Name]
+<% facilitator %>
 The Keystone Group · Leadership & Legacy Development
 
 ---

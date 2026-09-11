@@ -455,6 +455,8 @@ git reset --hard origin/main
 | Date | Version | Changes |
 |---|---|---|
 | 2026-09-11 | 1.0 | Initial creation — captured all requirements from vault build conversation |
+| 2026-09-11 | 1.1 | Rewrote all three templates with Templater plugin syntax |
+| 2026-09-11 | 1.2 | Fixed template issues: removed PDF/DOCX from 00-Templates, added facilitator prompt to Session-Note and Client-Summary-Email, added company tag (the-keystone-group) to all templates, clarified AI-Derived Action Steps workflow, added End-of-Session Checklist |
 
 ---
 

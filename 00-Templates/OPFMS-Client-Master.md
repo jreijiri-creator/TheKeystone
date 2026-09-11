@@ -24,7 +24,7 @@ box_folder: ""
 facilitator: "<% facilitator %>"
 status: "Active"
 total_sessions: 0
-tags: [client, EPL12, <% slug %>]
+tags: [client, EPL12, <% slug %>, the-keystone-group]
 ---
 
 # <% clientName %> — One Page Facilitation Management Sheet (OPFMS)

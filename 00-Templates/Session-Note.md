@@ -7,6 +7,7 @@ const sessionType = await tp.system.suggester(
   ["🟢 Regular", "🔴 Grievance", "🔁 Catch-up", "🔍 Review", "⚡ Free-form"],
   ["Regular", "Grievance", "Catch-up", "Review", "Free-form"]
 );
+const facilitator = await tp.system.prompt("Facilitator Name", "");
 const today = tp.date.now("YYYY-MM-DD");
 const todayLong = tp.date.now("MMMM DD, YYYY");
 const slug = clientName.replace(/ /g, "-");
@@ -20,9 +21,9 @@ lesson_covered: "<% lessonNum %>"
 lesson_title: "<% lessonTitle %>"
 session_type: "<% sessionType %>"
 duration_min: 
-facilitator: ""
+facilitator: "<% facilitator %>"
 pfs_score: 
-tags: [session, <% slug %>]
+tags: [session, <% slug %>, the-keystone-group]
 ---
 
 # Session <% sessionNum %> — <% clientName %>
@@ -86,8 +87,13 @@ tags: [session, <% slug %>]
 
 ## 🤖 AI-Derived Action Steps
 
-> *Paste your Zoom / Fathom transcript excerpt here, then ask AI: "Extract ONLY concrete action steps or commitments. List as bullet points."*
-> *Do NOT send the transcript to the client — only the extracted action steps go into the summary.*
+> **How this works (manual process — not automatic):**
+> 1. Download your Zoom or Fathom transcript after the session
+> 2. Paste a relevant excerpt below (the full transcript or a section)
+> 3. Copy the transcript + the instruction line below → paste into Abacus.AI, Claude, or ChatGPT
+> 4. Instruction to give the AI: *"From the transcript below, extract ONLY concrete action steps or commitments the client or coach made. List them as bullet points. Nothing else."*
+> 5. Paste the AI's response into "Extracted Action Steps" below
+> 6. **Do NOT send the transcript to the client** — only the extracted action steps go into the summary
 
 **Transcript Excerpt (paste here):**
 ```
@@ -221,7 +227,7 @@ Lesson audio: [Box Link]
 Looking forward to our next session.
 
 Positively,
-[Your Name]
+<% facilitator %>
 The Keystone Group
 
 ---
@@ -231,3 +237,19 @@ The Keystone Group
 ---
 
 *Note created: <% today %>*
+
+---
+
+## ✅ End-of-Session Checklist
+
+> *Work through this before closing the note. Top to bottom.*
+
+- [ ] **Intangible scores** filled in for all 3 intangibles
+- [ ] **Goals** section complete — personal, professional, intangible, carry-forward
+- [ ] **PFS score** filled in (if a lesson was covered) and recorded in OPFMS Session Log
+- [ ] **Assignment Selector** checked — next lesson chosen, forms ticked
+- [ ] **AI Action Steps** — transcript pasted and action steps extracted
+- [ ] **Client Summary Draft** finalized at the bottom of this note
+- [ ] **OPFMS Tangible Tracking** updated (W__ column) with today's PFS score and attendance
+- [ ] **Client Summary sent** to client (email or WhatsApp)
+- [ ] **GitHub Sync pushed** — Command Palette → "GitHub Sync: Push to remote"
