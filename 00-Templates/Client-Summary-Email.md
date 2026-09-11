@@ -1,21 +1,34 @@
+<%*
+const clientName = await tp.system.prompt("Client Full Name");
+const sessionNum = await tp.system.prompt("Session Number (e.g., 01)", "01");
+const lessonNum = await tp.system.prompt("Lesson (e.g., L02)", "");
+const sentVia = await tp.system.suggester(
+  ["📧 Email", "💬 WhatsApp"],
+  ["Email", "WhatsApp"]
+);
+const today = tp.date.now("YYYY-MM-DD");
+const todayLong = tp.date.now("MMMM DD, YYYY");
+const slug = clientName.replace(/ /g, "-");
+await tp.file.rename(`Summary-${slug}-Session-${sessionNum}`);
+-%>
 ---
-client_name: "{{CLIENT_NAME}}"
-session_date: "{{date}}"
-session_number: 
-lesson: ""
-status: "Draft"   # Draft | Sent
-sent_via: ""      # Email | WhatsApp
-tags: [summary, {{CLIENT_NAME}}]
+client_name: "<% clientName %>"
+session_date: "<% today %>"
+session_number: <% sessionNum %>
+lesson: "<% lessonNum %>"
+status: "Draft"
+sent_via: "<% sentVia %>"
+tags: [summary, <% slug %>]
 ---
 
-# Client Summary — {{CLIENT_NAME}} — Session {{session_number}}
+# Client Summary — <% clientName %> — Session <% sessionNum %>
 
-> **Send via:** {{sent_via}} | **Status:** {{status}}
-> *When ready, copy everything below the line and send.*
+> **Date:** <% todayLong %> | **Send via:** <% sentVia %> | **Status:** Draft
+> *Finalize everything below, then copy and send.*
 
 ---
 
-Hello {{CLIENT_NAME}},
+Hello <% clientName %>,
 
 It was great connecting with you today. Here is a summary of what we agreed on, along with your goals and assignment for the coming week.
 
@@ -50,13 +63,13 @@ Complete the following forms (attached / available on the platform):
 
 **Lesson audio link:** [Box Link]
 
-**Additional reading / article:** [If applicable]
+**Additional reading / article:** *(if applicable)*
 
 ---
 
 ## 💬 A Note from Your Coach
 
-*(Personal, encouraging closing — 2-3 sentences)*
+*(Personal, encouraging closing — 2–3 sentences)*
 
 ---
 

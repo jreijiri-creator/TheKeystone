@@ -1,23 +1,36 @@
+<%*
+const clientName = await tp.system.prompt("Client Full Name (First Last)");
+const clientEmail = await tp.system.prompt("Client Email", "");
+const clientMobile = await tp.system.prompt("Client Mobile", "");
+const clientDOB = await tp.system.prompt("Date of Birth (YYYY-MM-DD)", "");
+const jobTitle = await tp.system.prompt("Job Title", "");
+const organization = await tp.system.prompt("Organization / Company", "");
+const startDate = await tp.system.prompt("Program Start Date (YYYY-MM-DD)", tp.date.now("YYYY-MM-DD"));
+const facilitator = await tp.system.prompt("Facilitator Name", "");
+const today = tp.date.now("YYYY-MM-DD");
+const slug = clientName.replace(/ /g, "-");
+await tp.file.rename(`OPFMS-${slug}`);
+-%>
 ---
-client_name: "{{CLIENT_NAME}}"
-email: ""
-mobile: ""
-date_of_birth: ""
-job_title: ""
-organization: ""
+client_name: "<% clientName %>"
+email: "<% clientEmail %>"
+mobile: "<% clientMobile %>"
+date_of_birth: "<% clientDOB %>"
+job_title: "<% jobTitle %>"
+organization: "<% organization %>"
 program: "EPL12"
-program_start_date: ""
+program_start_date: "<% startDate %>"
 box_folder: ""
-facilitator: ""
+facilitator: "<% facilitator %>"
 status: "Active"
 total_sessions: 0
-tags: [client, EPL12]
+tags: [client, EPL12, <% slug %>]
 ---
 
-# {{CLIENT_NAME}} — One Page Facilitation Management Sheet (OPFMS)
+# <% clientName %> — One Page Facilitation Management Sheet (OPFMS)
 
-> **Program:** {{program}} | **Start:** {{program_start_date}} | **Facilitator:** {{facilitator}}
-> **Status:** {{status}}
+> **Program:** EPL12 | **Start:** <% startDate %> | **Facilitator:** <% facilitator %>
+> **Status:** Active
 
 ---
 
@@ -25,12 +38,12 @@ tags: [client, EPL12]
 
 | Field | Value |
 |---|---|
-| Name | |
-| Email | |
-| Mobile | |
-| Date of Birth | |
-| Job Title | |
-| Organization | |
+| Name | <% clientName %> |
+| Email | <% clientEmail %> |
+| Mobile | <% clientMobile %> |
+| Date of Birth | <% clientDOB %> |
+| Job Title | <% jobTitle %> |
+| Organization | <% organization %> |
 | Box Folder | |
 
 ---
@@ -131,7 +144,7 @@ tags: [client, EPL12]
 
 ## 🌟 Intangibles Registry
 
-> *Behavioral or attitudinal habits we identified together. The client defines each scale level, self-scores at the start or end of each session, and sets a goal if improvement is desired.*
+> *Behavioral or attitudinal habits identified together with the client. The client defines each scale level in their own words, self-scores at the start or end of each session, and sets a goal if improvement is desired.*
 
 ---
 
@@ -241,4 +254,4 @@ tags: [client, EPL12]
 
 ---
 
-*Last updated: {{date}}*
+*Last updated: <% today %>*

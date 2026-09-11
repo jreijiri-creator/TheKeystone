@@ -1,19 +1,33 @@
+<%*
+const clientName = await tp.system.prompt("Client Full Name");
+const sessionNum = await tp.system.prompt("Session Number (e.g., 01)", "01");
+const lessonNum = await tp.system.prompt("Lesson (e.g., L02 — or type NONE)", "L01");
+const lessonTitle = await tp.system.prompt("Lesson Title (leave blank if no lesson)", "");
+const sessionType = await tp.system.suggester(
+  ["🟢 Regular", "🔴 Grievance", "🔁 Catch-up", "🔍 Review", "⚡ Free-form"],
+  ["Regular", "Grievance", "Catch-up", "Review", "Free-form"]
+);
+const today = tp.date.now("YYYY-MM-DD");
+const todayLong = tp.date.now("MMMM DD, YYYY");
+const slug = clientName.replace(/ /g, "-");
+await tp.file.rename(`${today}-Session-${sessionNum}-${lessonNum}`);
+-%>
 ---
-client_name: "{{CLIENT_NAME}}"
-session_number: 
-session_date: "{{date}}"
-lesson_covered: ""
-lesson_title: ""
-session_type: "Regular"   # Regular | Grievance | Catch-up | Review | Free-form
+client_name: "<% clientName %>"
+session_number: <% sessionNum %>
+session_date: "<% today %>"
+lesson_covered: "<% lessonNum %>"
+lesson_title: "<% lessonTitle %>"
+session_type: "<% sessionType %>"
 duration_min: 
 facilitator: ""
 pfs_score: 
-tags: [session, {{CLIENT_NAME}}]
+tags: [session, <% slug %>]
 ---
 
-# Session {{session_number}} — {{CLIENT_NAME}}
+# Session <% sessionNum %> — <% clientName %>
 
-> **Date:** {{session_date}} | **Lesson:** {{lesson_covered}} | **Type:** {{session_type}}
+> **Date:** <% todayLong %> | **Lesson:** <% lessonNum %> — <% lessonTitle %> | **Type:** <% sessionType %>
 
 ---
 
@@ -45,9 +59,9 @@ tags: [session, {{CLIENT_NAME}}]
 
 | Intangible | Last Score | Today's Score | Δ | Goal for Next Week? |
 |---|---|---|---|---|
-| [Intangible 1 Name] | | | | |
-| [Intangible 2 Name] | | | | |
-| [Intangible 3 Name] | | | | |
+| [Intangible 1] | | | | |
+| [Intangible 2] | | | | |
+| [Intangible 3] | | | | |
 
 **Intangible Goals Added This Session:**
 - 
@@ -72,8 +86,8 @@ tags: [session, {{CLIENT_NAME}}]
 
 ## 🤖 AI-Derived Action Steps
 
-> *Paste your Zoom / Fathom transcript excerpt here, then extract recommended action steps.*
-> *Instruction for AI: "From the transcript below, extract ONLY concrete action steps or commitments the client or coach recommended. List them as bullet points."*
+> *Paste your Zoom / Fathom transcript excerpt here, then ask AI: "Extract ONLY concrete action steps or commitments. List as bullet points."*
+> *Do NOT send the transcript to the client — only the extracted action steps go into the summary.*
 
 **Transcript Excerpt (paste here):**
 ```
@@ -112,7 +126,6 @@ tags: [session, {{CLIENT_NAME}}]
 ## 📋 PFS Scoring
 
 > *Complete ONLY if a lesson chapter was covered this session.*
-> *Lesson:* _______ | *Title:* _______
 
 | Category | Max | Score | Notes |
 |---|---|---|---|
@@ -125,6 +138,8 @@ tags: [session, {{CLIENT_NAME}}]
 | Satisfaction / Relevance of Chapter | 40 | | |
 | **TOTAL** | **100** | | |
 
+**PFS Interpretation:** 90-100 Exceptional · 75-89 Strong · 60-74 Good · 40-59 Moderate · <40 Low
+
 **PFS Narrative:**
 *(Client's main feedback on the lesson — what resonated, what didn't)*
 
@@ -132,12 +147,10 @@ tags: [session, {{CLIENT_NAME}}]
 
 ## 📦 Next Session Assignment Selector
 
-> *Check all that apply. This drives what goes into the client's summary email.*
-
 **Lesson for Next Session:**
-- [ ] Lesson ____ : ____________________  (same lesson — not completed)
-- [ ] Lesson ____ : ____________________  (advancing)
-- [ ] Free-form / No lesson (grievance, review, or other)
+- [ ] Lesson ____ : ____________________ (same — not completed)
+- [ ] Lesson ____ : ____________________ (advancing)
+- [ ] Free-form / No lesson
 
 **Forms to Assign:**
 
@@ -156,17 +169,15 @@ tags: [session, {{CLIENT_NAME}}]
 **Audio/Box Link for Next Lesson:**
 - Link: 
 
-**Additional Attachments:**
-
 ---
 
 ## 📤 Client Summary Draft
 
-> *Pre-filled for your review. Copy to `Client-Summary-Email.md`, finalize, and send/share.*
+> *Review, finalize, and copy to send. Do NOT include transcript or raw coaching notes.*
 
 ---
 
-Hello {{CLIENT_NAME}},
+Hello <% clientName %>,
 
 It was great connecting with you today. Here is a summary of our session and what we've agreed on for the coming week.
 
@@ -185,8 +196,7 @@ It was great connecting with you today. Here is a summary of our session and wha
 - 
 - 
 
-**Intangible — {{Intangible Name}}:**
-*(e.g., "Your goal is to reach a +5 this week by...")*
+**Intangible:**
 - 
 
 ---
@@ -195,12 +205,12 @@ It was great connecting with you today. Here is a summary of our session and wha
 
 Please read and listen to **Lesson ___: [Title]** for a combined total of **6 repetitions**.
 
-The following forms are attached and should be completed in order:
+Forms to complete:
 1. **M020** — Participant Feedback Sheet (PFS)
 2. **M021** — Action Steps Log
 3. *(add others as selected above)*
 
-You can find the lesson audio here: [Box Link]
+Lesson audio: [Box Link]
 
 ---
 
@@ -220,4 +230,4 @@ The Keystone Group
 
 ---
 
-*Session note created: {{date}}*
+*Note created: <% today %>*
