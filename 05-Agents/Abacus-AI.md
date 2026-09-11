@@ -182,18 +182,29 @@ Keystone-Obsidian-Vault/
 
 ## Workflow Patterns
 
-### Creating a New Client
+### Creating a New Client (One-Button Setup)
 
-1. Create folder: `01-Clients/[FirstName-LastName]/`
-2. Create subfolder: `01-Clients/[FirstName-LastName]/Sessions/`
-3. Create subfolder: `01-Clients/[FirstName-LastName]/Documents/`
-4. Inside the client folder, create a new note using Templater → insert `OPFMS-Client-Master` template
-5. Answer all prompts (name, email, mobile, DOB, job, org, start date, facilitator)
-6. File auto-renames to `OPFMS-[FirstName-LastName].md`
-7. Fill in Participant Profile section (auto-populated from prompts)
-8. Run personality assessment → fill Personality Profile
-9. Define intangibles together with client (custom scale definitions for each)
-10. Fill in Important Facilitator Notes ("What NOT to do", "How to care", patterns)
+Use the **New Client Setup Wizard** — one trigger creates everything automatically.
+
+**How to trigger:**
+- `Cmd+P` → "Templater: Create new note from template" → select **`New-Client-Setup`**
+
+**What the wizard does automatically:**
+1. Prompts for client info (First Name, Last Name, Email, Mobile, DOB, Job Title, Organization, Start Date, Facilitator)
+2. Creates `01-Clients/FirstName-LastName/` folder
+3. Creates `Sessions/` subfolder
+4. Creates `Documents/` subfolder
+5. Generates the full OPFMS note with all fields pre-filled and opens it
+6. Self-destructs the temporary setup note
+
+**After setup — what still needs manual entry:**
+- Personality Profile (run the assessment first, then fill in)
+- Win-Win Challenges (discuss with client in Session 1)
+- Wheel of Life scores (baseline assessment)
+- Intangibles #1–3 (define together with client — names + scale descriptions)
+- Important Facilitator Notes ("What NOT to do", "How to care", patterns)
+
+**Template file:** `00-Templates/New-Client-Setup.md`
 
 ### Starting a New Session
 
@@ -461,6 +472,7 @@ git reset --hard origin/main
 | 2026-09-11 | 1.1 | Rewrote all three templates with Templater plugin syntax |
 | 2026-09-11 | 1.2 | Fixed template issues: removed PDF/DOCX from 00-Templates, added facilitator prompt to Session-Note and Client-Summary-Email, added company tag (the-keystone-group) to all templates, clarified AI-Derived Action Steps workflow, added End-of-Session Checklist |
 | 2026-09-11 | 1.3 | Added Documents/ subfolder to client folder structure for storing uploaded files, forms, and attachments |
+| 2026-09-11 | 1.4 | Added New-Client-Setup.md — one-trigger wizard that creates client folder + Sessions/ + Documents/ + full OPFMS automatically |
 
 ---
 
