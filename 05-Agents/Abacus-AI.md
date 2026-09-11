@@ -469,6 +469,7 @@ When working on this vault in future conversations:
 5. **Keep the adaptive session workflow** — never assume lessons are sequential
 6. **Update this file** when user requirements change or new patterns emerge
 7. **Test changes** by pushing to GitHub and confirming user can pull successfully
+8. **Create a changelog note after every edit** to the `05-Agents/` folder — format: `[AGENT-NAME]-v[X.X]-Changes.md` documenting what changed and why
 
 ---
 
