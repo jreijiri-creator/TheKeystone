@@ -16,6 +16,9 @@ tags: [client, EPL12, completed]
 
 # Joanna Abou Jaoudeh — OPFMS
 
+> **📋 Quick Navigation**
+> [[#👤 Participant Profile]] · [[#🧠 Personality Profile]] · [[#🎯 Win-Win Challenges]] · [[#📊 Personal Leadership Evaluation]] · [[#🔄 Life Areas in Focus (EPL)]] · [[#👨‍👩‍👧 Family / Genogram Notes]] · [[#📝 Important Facilitator Notes]] · [[#🎡 Wheel of Life]] · [[#🌟 Intangibles Registry]] · [[#📈 Tangible Indicators Tracking]] · [[#📚 Session Log]] · [[#🔗 Dream List Notes]]
+
 > **Program:** EPL12 | **Organization:** Cisco | **Status:** Completed
 > **Email:** aboujaoude.joanna@gmail.com | **Mobile:** +961 70 971 824
 

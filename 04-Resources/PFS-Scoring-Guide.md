@@ -1,5 +1,8 @@
 # PFS Scoring Guide — The Keystone Group
 
+> **📋 Quick Navigation**
+> [[#Score Breakdown]] · [[#How to Score Each Category]] · [[#Score Benchmarks]]
+
 **Participant Feedback Sheet (PFS) — 100-Point Unified Score**
 
 ---

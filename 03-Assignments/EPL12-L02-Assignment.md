@@ -10,6 +10,9 @@ tags: [assignment, EPL12, L02]
 
 # EPL12 — Lesson 02 Assignment
 
+> **📋 Quick Navigation**
+> [[#🎯 Context & Framing]] · [[#📖 Reading & Listening]] · [[#📝 Most Valuable Idea]] · [[#📋 Forms to Complete]] · [[#📰 Supplementary Reading (Optional)]] · [[#✍️ Coach's Closing Note]]
+
 **Lesson 02: Self-Knowledge — The Source of Personal Leadership**
 
 ---

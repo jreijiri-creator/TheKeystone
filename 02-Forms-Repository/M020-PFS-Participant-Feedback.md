@@ -11,6 +11,9 @@ tags: [form, PFS]
 
 # M020 — Participant Feedback Sheet (PFS)
 
+> **📋 Quick Navigation**
+> [[#1. Reading & Listening Log]] · [[#2. Most Valuable Idea]] · [[#3. Application of Best Idea]] · [[#4. Goals Accomplished This Week]] · [[#5. Emotional Intelligence Self-Evaluation]] · [[#6. Managing Negative Emotions]] · [[#7. Dreams Added]] · [[#8. Additional Results]] · [[#9. Self-Rating]] · [[#📊 PFS Score — Coach Section]]
+
 **Effective Personal Leadership® — Lesson ___: [Lesson Title]**
 
 | Field | Value |

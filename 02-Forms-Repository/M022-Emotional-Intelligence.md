@@ -10,6 +10,9 @@ tags: [form, emotional-intelligence]
 
 # M022 — Emotional Intelligence Self-Evaluation
 
+> **📋 Quick Navigation**
+> [[#Part 1: Self-Awareness]] · [[#Part 2: Self-Management]] · [[#Summary]] · [[#Reflection]]
+
 **Effective Personal Leadership® — Lesson 02: Self-Knowledge**
 
 | Field | Value |

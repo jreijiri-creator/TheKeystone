@@ -473,6 +473,7 @@ git reset --hard origin/main
 | 2026-09-11 | 1.2 | Fixed template issues: removed PDF/DOCX from 00-Templates, added facilitator prompt to Session-Note and Client-Summary-Email, added company tag (the-keystone-group) to all templates, clarified AI-Derived Action Steps workflow, added End-of-Session Checklist |
 | 2026-09-11 | 1.3 | Added Documents/ subfolder to client folder structure for storing uploaded files, forms, and attachments |
 | 2026-09-11 | 1.4 | Added New-Client-Setup.md — one-trigger wizard that creates client folder + Sessions/ + Documents/ + full OPFMS automatically |
+| 2026-09-11 | 1.5 | Added [[#heading]] TOC navigation to all 13 vault files. Fixed corrupted Session-Note.md (restored from git). All internal links now work in both Live Preview and Reading View. |
 
 ---
 

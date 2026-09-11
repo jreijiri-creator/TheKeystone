@@ -10,6 +10,9 @@ tags: [form, future-description, business]
 
 # P080 — Business Future Description
 
+> **📋 Quick Navigation**
+> [[#My Business Future Description]] · [[#In Reviewing My Future Description...]] · [[#Am I on Track?]] · [[#Changes Needed]]
+
 **Effective Personal Leadership® — Form 8.2**
 
 | Field | Value |

@@ -10,6 +10,9 @@ tags: [assignment, EPL12]
 
 # EPL12 — Lesson ___ Assignment
 
+> **📋 Quick Navigation**
+> [[#🎯 Context & Framing]] · [[#📖 Reading & Listening]] · [[#📝 Most Valuable Idea]] · [[#📋 Forms to Complete]] · [[#📰 Supplementary Reading (Optional)]] · [[#✍️ Coach's Closing Note]]
+
 **Lesson ___: [Title]**
 
 ---

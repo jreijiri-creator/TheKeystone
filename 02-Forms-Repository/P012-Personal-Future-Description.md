@@ -11,6 +11,9 @@ tags: [form, future-description, personal]
 
 # P012 — Personal Future Description
 
+> **📋 Quick Navigation**
+> [[#My Personal Future Description]] · [[#In Reviewing My Projection...]] · [[#Am I on Track?]] · [[#Changes Needed]]
+
 **Effective Personal Leadership® — Form 1.2**
 
 | Field | Value |

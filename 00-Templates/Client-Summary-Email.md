@@ -24,6 +24,9 @@ tags: [summary, <% slug %>, the-keystone-group]
 
 # Client Summary — <% clientName %> — Session <% sessionNum %>
 
+> **📋 Quick Navigation**
+> [[#✅ Your Goals for This Week]] · [[#📚 Assignment for Next Session]] · [[#💬 A Note from Your Coach]]
+
 > **Date:** <% todayLong %> | **Send via:** <% sentVia %> | **Status:** Draft
 > *Finalize everything below, then copy and send.*
 

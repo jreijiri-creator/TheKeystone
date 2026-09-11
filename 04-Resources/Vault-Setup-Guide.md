@@ -1,5 +1,8 @@
 # Vault Setup & Obsidian Configuration Guide
 
+> **📋 Quick Navigation**
+> [[#Step 1: Open This Vault in Obsidian]] · [[#Step 2: Recommended Plugins (all free, install via Settings → Community Plugins)]] · [[#Step 3: Configure Templater]] · [[#Step 4: Set Up QuickAdd for New Session (Optional but Powerful)]] · [[#Step 5: Adding a New Client]] · [[#Step 6: Starting a New Session]] · [[#Step 7: WhatsApp Link (Future)]] · [[#Step 8: AI Transcript Action Steps (Current Workflow)]] · [[#Dataview Example Queries]]
+
 ---
 
 ## Step 1: Open This Vault in Obsidian

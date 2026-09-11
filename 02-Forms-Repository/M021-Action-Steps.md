@@ -10,6 +10,9 @@ tags: [form, action-steps]
 
 # M021 — Action Steps Log
 
+> **📋 Quick Navigation**
+> [[#💡 Key Idea from This Lesson]] · [[#📋 Action Log for Lesson ___]] · [[#🧠 Emotional Awareness Reflection]] · [[#🏆 Authentic Leadership Development]] · [[#⚡ 7-Day Action Commitment]] · [[#📌 Plan of Action Notes]]
+
 **Effective Personal Leadership® — Lesson ___: [Lesson Title]**
 
 | Field | Value |
